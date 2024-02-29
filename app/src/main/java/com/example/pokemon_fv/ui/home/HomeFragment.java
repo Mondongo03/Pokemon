@@ -25,6 +25,12 @@ public class HomeFragment extends Fragment {
 
     private FragmentHomeBinding binding;
 
+    @Override
+    public void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+
+    }
+
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         HomeViewModel homeViewModel =
@@ -70,7 +76,31 @@ public class HomeFragment extends Fragment {
         return root;
     }
 
+    @Override
+    public void onResume() {
+        super.onResume();
 
+        // Hacer visible el BottomNavigationView
+        BottomNavigationView bottomNav = requireActivity().findViewById(R.id.nav_view);
+        bottomNav.setVisibility(View.VISIBLE);
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+
+        int currentFragmentId = Navigation.findNavController(requireActivity(), R.id.nav_host_fragment_activity_main).getCurrentDestination().getId();
+
+        // Hacer invisible el BottomNavigationView
+        if (currentFragmentId == R.id.navigation_dashboard || currentFragmentId == R.id.navigation_notifications || currentFragmentId == R.id.navigation_home) {
+            BottomNavigationView bottomNav = requireActivity().findViewById(R.id.nav_view);
+            bottomNav.setVisibility(View.VISIBLE);
+        }
+        else {
+            BottomNavigationView bottomNav = requireActivity().findViewById(R.id.nav_view);
+            bottomNav.setVisibility(View.INVISIBLE);
+        }
+    }
 
     @Override
     public void onDestroyView() {

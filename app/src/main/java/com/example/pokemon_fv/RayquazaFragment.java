@@ -64,7 +64,7 @@ public class RayquazaFragment extends Fragment {
 
         View root = binding.getRoot();
         BottomNavigationView navView = requireActivity().findViewById(R.id.nav_view);
-        navView.setVisibility(View.GONE);
+        navView.setVisibility(View.INVISIBLE);
 
 
         Spinner spinner = root.findViewById(R.id.imageSpinner);
