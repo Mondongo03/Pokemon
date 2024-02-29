@@ -8,9 +8,12 @@ import androidx.navigation.Navigation;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.Window;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.example.pokemon_fv.databinding.FragmentLucarioBinding;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
@@ -40,6 +43,7 @@ public class LucarioFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        //requestWindowFeature(Window.FEATURE_NO_TITLE);
         if (getArguments() != null) {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
@@ -56,6 +60,11 @@ public class LucarioFragment extends Fragment {
 
 
         TextView back = root.findViewById(R.id.lucarioFragmentText);
+
+        ImageView imageView = root.findViewById(R.id.gifLucario);
+
+// Cargar y mostrar un GIF desde una URL
+        Glide.with(this).asGif().load(R.drawable.lucario_gif).into(imageView);
 
         back.setOnClickListener(new View.OnClickListener() {
             @Override
