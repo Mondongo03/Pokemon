@@ -2,6 +2,7 @@ package com.example.pokemon_fv;
 
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
+import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 
@@ -28,15 +29,30 @@ public class MainActivity extends AppCompatActivity {
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
         getSupportActionBar().hide();
-        BottomNavigationView navView = findViewById(R.id.nav_view);
-        // Passing each menu ID as a set of Ids because each
-        // menu should be considered as top level destinations.
-        AppBarConfiguration appBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.navigation_home, R.id.navigation_dashboard, R.id.navigation_notifications)
-                .build();
 
+        AppBarConfiguration appBarConfiguration = new AppBarConfiguration.Builder(
+                R.id.navigation_home,   // ID del destino de nivel superior (puede haber múltiples)
+                R.id.navigation_dashboard,
+                R.id.navigation_notifications
+        ).build();
+
+        // Mueve la inicialización de navView aquí
+        BottomNavigationView navView = findViewById(R.id.nav_view);
+
+        // Configura la navegación
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_activity_main);
         NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
         NavigationUI.setupWithNavController(binding.navView, navController);
-        }
+
+        navController.addOnDestinationChangedListener((controller, destination, arguments) -> {
+            // Verifica si el fragmento actual es StartFragment
+            if (destination.getId() == R.id.startFragment) {
+                // Si es StartFragment, haz que el BottomNavigationView sea invisible
+                navView.setVisibility(View.INVISIBLE);
+            } else {
+                // Si no es StartFragment, haz que el BottomNavigationView sea visible
+                navView.setVisibility(View.VISIBLE);
+            }
+        });
+    }
 }

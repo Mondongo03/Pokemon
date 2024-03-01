@@ -2,9 +2,7 @@ package com.example.pokemon_fv;
 
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
-
 import androidx.fragment.app.Fragment;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,6 +13,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
  * A simple {@link Fragment} subclass.
  * Use the {@link StartFragment#newInstance} factory method to
  * create an instance of this fragment.
+ *
  */
 public class StartFragment extends Fragment {
 
@@ -27,8 +26,15 @@ public class StartFragment extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    public StartFragment() {
-    }
+    /**
+     * Use this factory method to create a new instance of
+     * this fragment using the provided parameters.
+     *
+     * @param param1 Parameter 1.
+     * @param param2 Parameter 2.
+     * @return A new instance of fragment StartFragment.
+     */
+    // TODO: Rename and change types and number of parameters
     public static StartFragment newInstance(String param1, String param2) {
         StartFragment fragment = new StartFragment();
         Bundle args = new Bundle();
@@ -38,6 +44,10 @@ public class StartFragment extends Fragment {
         return fragment;
     }
 
+    public StartFragment() {
+        // Required empty public constructor
+    }
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -45,8 +55,6 @@ public class StartFragment extends Fragment {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
-        BottomNavigationView navView = requireActivity().findViewById(R.id.nav_view);
-        navView.setVisibility(View.VISIBLE);
     }
 
     @Override
