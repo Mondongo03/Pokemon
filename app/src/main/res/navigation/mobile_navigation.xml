@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/navigation_home">
+    app:startDestination="@id/navigation_home">
 
     <fragment
         android:id="@+id/navigation_home"
@@ -37,4 +37,9 @@
         android:name="com.example.pokemon_fv.ZoroarkFragment"
         android:label="fragment_zoroark"
         tools:layout="@layout/fragment_zoroark" />
+    <fragment
+        android:id="@+id/startFragment"
+        android:name="com.example.pokemon_fv.StartFragment"
+        android:label="fragment_start"
+        tools:layout="@layout/fragment_start" />
 </navigation>

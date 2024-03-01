@@ -1,40 +1,34 @@
 package com.example.pokemon_fv.ui.home;
 
 import android.os.Bundle;
+import android.transition.Fade;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
-import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentTransaction;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.navigation.NavController;
+import androidx.navigation.NavOptions;
 import androidx.navigation.Navigation;
 
 import com.example.pokemon_fv.R;
 import com.example.pokemon_fv.databinding.FragmentHomeBinding;
-import com.example.pokemon_fv.ui.dashboard.DashboardFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class HomeFragment extends Fragment {
-
     private FragmentHomeBinding binding;
-
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
     }
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        HomeViewModel homeViewModel =
-                new ViewModelProvider(this).get(HomeViewModel.class);
+        HomeViewModel homeViewModel = new ViewModelProvider(this).get(HomeViewModel.class);
 
 
         binding = FragmentHomeBinding.inflate(inflater, container, false);
@@ -50,17 +44,48 @@ public class HomeFragment extends Fragment {
         lucario.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Replace "YourFragment" with the fragment you want to navigate to
-                Navigation.findNavController(requireActivity(), R.id.nav_host_fragment_activity_main).navigate(R.id.lucarioFragment);
+                // Define la transición de difuminado
+                Fade fade = new Fade();
+                fade.setDuration(500); // Establece la duración de la animación en milisegundos
+
+                // Configura la transición en el NavController
+                NavController navController = Navigation.findNavController(requireActivity(), R.id.nav_host_fragment_activity_main);
+
+                // Configura la animación de transición para la entrada y salida
+                NavOptions navOptions = new NavOptions.Builder()
+                        .setEnterAnim(android.R.anim.fade_in) // Animación de entrada
+                        .setExitAnim(android.R.anim.fade_out) // Animación de salida
+                        .setPopEnterAnim(android.R.anim.fade_in) // Animación al retroceder
+                        .setPopExitAnim(android.R.anim.fade_out) // Animación al retroceder
+                        .build();
+
+                // Realiza la transición con animación
+                navController.navigate(R.id.lucarioFragment, null, navOptions);
             }
         });
+
 
 
         zoroark.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Replace "YourFragment" with the fragment you want to navigate to
-                Navigation.findNavController(requireActivity(), R.id.nav_host_fragment_activity_main).navigate(R.id.zoroarkFragment);
+                // Define la transición de difuminado
+                Fade fade = new Fade();
+                fade.setDuration(500); // Establece la duración de la animación en milisegundos
+
+                // Configura la transición en el NavController
+                NavController navController = Navigation.findNavController(requireActivity(), R.id.nav_host_fragment_activity_main);
+
+                // Configura la animación de transición para la entrada y salida
+                NavOptions navOptions = new NavOptions.Builder()
+                        .setEnterAnim(android.R.anim.fade_in) // Animación de entrada
+                        .setExitAnim(android.R.anim.fade_out) // Animación de salida
+                        .setPopEnterAnim(android.R.anim.fade_in) // Animación al retroceder
+                        .setPopExitAnim(android.R.anim.fade_out) // Animación al retroceder
+                        .build();
+
+                // Realiza la transición con animación
+                navController.navigate(R.id.zoroarkFragment, null, navOptions);
             }
         });
 
@@ -68,8 +93,23 @@ public class HomeFragment extends Fragment {
         rayquaza.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Replace "YourFragment" with the fragment you want to navigate to
-                Navigation.findNavController(requireActivity(), R.id.nav_host_fragment_activity_main).navigate(R.id.rayquazaFragment);
+                // Define la transición de difuminado
+                Fade fade = new Fade();
+                fade.setDuration(500); // Establece la duración de la animación en milisegundos
+
+                // Configura la transición en el NavController
+                NavController navController = Navigation.findNavController(requireActivity(), R.id.nav_host_fragment_activity_main);
+
+                // Configura la animación de transición para la entrada y salida
+                NavOptions navOptions = new NavOptions.Builder()
+                        .setEnterAnim(android.R.anim.fade_in) // Animación de entrada
+                        .setExitAnim(android.R.anim.fade_out) // Animación de salida
+                        .setPopEnterAnim(android.R.anim.fade_in) // Animación al retroceder
+                        .setPopExitAnim(android.R.anim.fade_out) // Animación al retroceder
+                        .build();
+
+                // Realiza la transición con animación
+                navController.navigate(R.id.rayquazaFragment, null, navOptions);
             }
         });
 

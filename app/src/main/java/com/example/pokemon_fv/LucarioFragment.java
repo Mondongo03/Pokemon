@@ -49,8 +49,6 @@ public class LucarioFragment extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    //private BarChart lucarioStatsChart;
-    private XYPlot lucarioStatsPlot;
     public LucarioFragment() {
         // Required empty public constructor
     }

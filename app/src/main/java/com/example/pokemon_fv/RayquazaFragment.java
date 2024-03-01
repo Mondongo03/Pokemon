@@ -1,5 +1,6 @@
 package com.example.pokemon_fv;
 
+import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -52,6 +53,12 @@ public class RayquazaFragment extends Fragment {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
+        BottomNavigationView navView = requireActivity().findViewById(R.id.nav_view);
+        if (getActivity() != null) {
+            getActivity().setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+        }
+        navView.setVisibility(View.INVISIBLE);
+
 
 
     }
@@ -66,17 +73,20 @@ public class RayquazaFragment extends Fragment {
         BottomNavigationView navView = requireActivity().findViewById(R.id.nav_view);
         navView.setVisibility(View.INVISIBLE);
 
+        ImageView back = root.findViewById(R.id.back);
 
+        ImageView imageView = root.findViewById(R.id.gifRayquaza);
 
-        // Define las imágenes que deseas mostrar en el Spinner
-        Integer[] images = {R.drawable.rayquaza_home, R.drawable.rhyperior_home, R.drawable.dragonite_home};
+// Cargar y mostrar un GIF desde una URL
+        Glide.with(this).asGif().load(R.drawable.rayquaza_gif).into(imageView);
 
-        // Crea un adaptador personalizado y configúralo en el Spinner
-        ImageSpinnerAdapter adapter = new ImageSpinnerAdapter(requireContext(), R.layout.item_spinner_image, images);
-
-
-// Cargar y mostrar un GIF desde recursos
-
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Navigate back
+                requireActivity().onBackPressed();
+            }
+        });
 
         return root;
     }

@@ -42,7 +42,7 @@
             android:id="@+id/gifRayquaza"
             android:layout_width="140dp"
             android:layout_height="140dp"
-            android:layout_marginStart="20dp"
+            android:layout_marginStart="40dp"
             android:layout_marginTop="30dp"
             app:layout_constraintEnd_toStartOf="@+id/rayquazaFragmentText"
             app:layout_constraintStart_toStartOf="parent"
@@ -75,12 +75,12 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:paddingRight="10dp"
-                android:src="@drawable/lucha" />
+                android:src="@drawable/dragon" />
 
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/acero" />
+                android:src="@drawable/volador" />
         </LinearLayout>
 
         <TextView
@@ -130,10 +130,10 @@
             tools:ignore="MissingConstraints">
 
             <androidx.constraintlayout.utils.widget.MotionLabel
-                android:layout_width="70dp"
+                android:layout_width="105dp"
                 android:layout_height="30dp"
                 android:background="@drawable/hp"
-                android:text="70"
+                android:text="105"
                 android:textColor="#FFFFFF"
                 android:textSize="16sp" />
 
@@ -165,10 +165,10 @@
             tools:ignore="MissingConstraints">
 
             <androidx.constraintlayout.utils.widget.MotionLabel
-                android:layout_width="110dp"
+                android:layout_width="150dp"
                 android:layout_height="30dp"
                 android:background="@drawable/atq"
-                android:text="110"
+                android:text="150"
                 android:textColor="#FFFFFF"
                 android:textSize="16sp" />
 
@@ -199,10 +199,10 @@
             tools:ignore="MissingConstraints">
 
             <androidx.constraintlayout.utils.widget.MotionLabel
-                android:layout_width="70dp"
+                android:layout_width="90dp"
                 android:layout_height="30dp"
                 android:background="@drawable/def"
-                android:text="70"
+                android:text="90"
                 android:textColor="#FFFFFF"
                 android:textSize="16sp" />
 
@@ -233,10 +233,10 @@
             tools:ignore="MissingConstraints">
 
             <androidx.constraintlayout.utils.widget.MotionLabel
-                android:layout_width="90dp"
+                android:layout_width="95dp"
                 android:layout_height="30dp"
                 android:background="@drawable/vel"
-                android:text="90"
+                android:text="95"
                 android:textColor="#FFFFFF"
                 android:textSize="16sp" />
 
@@ -267,10 +267,10 @@
             tools:ignore="MissingConstraints">
 
             <androidx.constraintlayout.utils.widget.MotionLabel
-                android:layout_width="115dp"
+                android:layout_width="150dp"
                 android:layout_height="30dp"
                 android:background="@drawable/satq"
-                android:text="115"
+                android:text="150"
                 android:textColor="#FFFFFF"
                 android:textSize="16sp" />
 
@@ -301,10 +301,10 @@
             tools:ignore="MissingConstraints">
 
             <androidx.constraintlayout.utils.widget.MotionLabel
-                android:layout_width="70dp"
+                android:layout_width="90dp"
                 android:layout_height="30dp"
                 android:background="@drawable/sdef"
-                android:text="70"
+                android:text="90"
                 android:textColor="#FFFFFF"
                 android:textSize="16sp" />
 
@@ -587,66 +587,20 @@
                         android:textSize="16sp" />
                 </LinearLayout>
                 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                    android:id="@+id/mov5"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:text="Lv45"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:gravity="center"
-                        android:textSize="16sp" />
-
-                    <TextView
-                        android:layout_width="100dp"
-                        android:layout_height="match_parent"
-                        android:gravity="center"
-                        android:text="Vl.Extrem"
-                        android:textSize="16sp" />
-                    <ImageView
-                        android:layout_weight="1"
-                        android:layout_width="6dp"
-                        android:layout_height="wrap_content"
-                        android:src="@drawable/fisico"
-                        />
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:text="80"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:gravity="center"
-                        android:textSize="16sp" />
-                    <TextView
-                        android:layout_width="50dp"
-                        android:text="100%"
-                        android:layout_height="match_parent"
-                        android:gravity="center"
-                        android:textSize="16sp" />
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:text="5"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:gravity="center"
-                        android:textSize="16sp" />
-                </LinearLayout>
-                <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
                     android:id="@+id/mov6"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
                     <TextView
                         android:layout_width="wrap_content"
-                        android:text="Lv29"
+                        android:text="Lv36"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
                         android:gravity="center"
                         android:textSize="16sp" />
                     <TextView
                         android:layout_width="100dp"
-                        android:text="Atq. Óseo"
+                        android:text="Pulso Dragón"
                         android:gravity="center"
                         android:layout_height="match_parent"
                         android:textSize="16sp" />
@@ -654,11 +608,11 @@
                         android:layout_weight="1"
                         android:layout_width="6dp"
                         android:layout_height="wrap_content"
-                        android:src="@drawable/fisico"
+                        android:src="@drawable/especial"
                         />
                     <TextView
                         android:layout_width="wrap_content"
-                        android:text="80"
+                        android:text="85"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
                         android:gravity="center"
@@ -668,7 +622,7 @@
                         android:text="90%"
                         android:layout_height="match_parent"
                         android:gravity="center"
-                        android:textSize="16sp" />
+                        android:textSize="16sp"/>
                     <TextView
                         android:layout_width="wrap_content"
                         android:text="20"
@@ -684,14 +638,14 @@
 
                     <TextView
                         android:layout_width="wrap_content"
-                        android:text="Lv47"
+                        android:text="Lv72"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
                         android:gravity="center"
                         android:textSize="16sp" />
                     <TextView
                         android:layout_width="100dp"
-                        android:text="Paz Mental"
+                        android:text="Vendaval"
                         android:gravity="center"
                         android:layout_height="match_parent"
                         android:textSize="16sp" />
@@ -699,24 +653,24 @@
                         android:layout_weight="1"
                         android:layout_width="6dp"
                         android:layout_height="wrap_content"
-                        android:src="@drawable/status"
+                        android:src="@drawable/especial"
                         />
                     <TextView
                         android:layout_width="wrap_content"
-                        android:text="00"
+                        android:text="95"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
                         android:gravity="center"
                         android:textSize="16sp" />
                     <TextView
                         android:layout_width="50dp"
-                        android:text="--"
+                        android:text="70%"
                         android:layout_height="match_parent"
                         android:gravity="center"
                         android:textSize="16sp" />
                     <TextView
                         android:layout_width="wrap_content"
-                        android:text="20"
+                        android:text="10"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
                         android:gravity="center"

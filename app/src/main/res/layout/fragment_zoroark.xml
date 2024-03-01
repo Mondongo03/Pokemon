@@ -1,14 +1,685 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ZoroarkFragment">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ZoroarkFragment"
+    android:screenOrientation="portrait"
+    android:background="@drawable/wallpaper_zoroark">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Zoroarrrrrrrkkkkkk" />
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/back"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/zoroarkFragmentText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="#571 Zoroark de Hisui"
+            android:textColor="@color/black"
+            android:textSize="30dp"
+            android:layout_marginTop="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints" />
+
+        <ImageView
+            android:id="@+id/gifzoroark"
+            android:layout_width="140dp"
+            android:layout_height="140dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="30dp"
+            app:layout_constraintEnd_toStartOf="@+id/zoroarkFragmentText"
+            app:layout_constraintHorizontal_bias="0.375"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/zoroarkFragmentText"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="230dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="20dp"
+            android:text="La revuelta melena blanca le hace parecer la personificación de la muerte. "
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/gifzoroark"
+            app:layout_constraintTop_toBottomOf="@+id/zoroarkFragmentText" />
+
+        <LinearLayout
+            android:id="@id/tipos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="6dp"
+            app:layout_constraintStart_toEndOf="@+id/gifzoroark"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView"
+            tools:ignore="MissingConstraints">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="10dp"
+                android:src="@drawable/normal" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/fantasma" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/habilidades"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="6dp"
+            android:text="Habilidad/es:"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/gifzoroark"
+            app:layout_constraintTop_toBottomOf="@+id/tipos"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/habilidad1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:text="Ilusión"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/gifzoroark"
+            app:layout_constraintTop_toBottomOf="@+id/habilidades"
+            tools:ignore="MissingConstraints" />
+        <TextView
+            android:id="@+id/habilidad2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:text=""
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/gifzoroark"
+            app:layout_constraintTop_toBottomOf="@+id/habilidad1"
+            tools:ignore="MissingConstraints" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/hp"
+            android:layout_width="255dp"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="20dp"
+            android:background="@drawable/borde_gris_lupa"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="@+id/habilidad2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/gifzoroark"
+            tools:ignore="MissingConstraints">
+
+            <androidx.constraintlayout.utils.widget.MotionLabel
+                android:layout_width="55dp"
+                android:layout_height="30dp"
+                android:background="@drawable/hp"
+                android:text="55"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/hp_text"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:paddingEnd="10dp"
+                android:text="Ps"
+                android:textColor="#22B115"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/atq"
+            android:layout_width="255dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+
+            android:background="@drawable/borde_gris_lupa"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="@+id/habilidad2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/hp"
+            tools:ignore="MissingConstraints">
+
+            <androidx.constraintlayout.utils.widget.MotionLabel
+                android:layout_width="100dp"
+                android:layout_height="30dp"
+                android:background="@drawable/atq"
+                android:text="100"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/ataq_text"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:paddingEnd="10dp"
+                android:text="Atq"
+                android:textColor="#E05A0F"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/def"
+            android:layout_width="255dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/borde_gris_lupa"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="@+id/habilidad2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/atq"
+            tools:ignore="MissingConstraints">
+
+            <androidx.constraintlayout.utils.widget.MotionLabel
+                android:layout_width="60dp"
+                android:layout_height="30dp"
+                android:background="@drawable/def"
+                android:text="60"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/def_text"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:paddingEnd="10dp"
+                android:text="Def"
+                android:textColor="#656C70"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/vel"
+            android:layout_width="255dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/borde_gris_lupa"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="@+id/habilidad2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/def"
+            tools:ignore="MissingConstraints">
+
+            <androidx.constraintlayout.utils.widget.MotionLabel
+                android:layout_width="110dp"
+                android:layout_height="30dp"
+                android:background="@drawable/vel"
+                android:text="110"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/vel_text"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:paddingEnd="10dp"
+                android:text="Vel"
+                android:textColor="#0FC2C2"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/satq"
+            android:layout_width="255dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/borde_gris_lupa"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="@+id/habilidad2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/vel"
+            tools:ignore="MissingConstraints">
+
+            <androidx.constraintlayout.utils.widget.MotionLabel
+                android:layout_width="125dp"
+                android:layout_height="30dp"
+                android:background="@drawable/satq"
+                android:text="125"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/satq_text"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:paddingEnd="10dp"
+                android:text="S.Atq"
+                android:textColor="#7237F0"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/sdef"
+            android:layout_width="255dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/borde_gris_lupa"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="@+id/habilidad2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/satq"
+            tools:ignore="MissingConstraints">
+
+            <androidx.constraintlayout.utils.widget.MotionLabel
+                android:layout_width="60dp"
+                android:layout_height="30dp"
+                android:background="@drawable/sdef"
+                android:text="60"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/sdef_text"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:paddingEnd="10dp"
+                android:text="S.Def"
+                android:textColor="#DF1445"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <TextView
+            android:id="@+id/categoria"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Categoria\n Maldizorro"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/atq"
+            app:layout_constraintTop_toTopOf="@+id/hp"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/genText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingTop="8dp"
+            android:text="Generación"
+            app:layout_constraintBottom_toBottomOf="@+id/def"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/atq"
+            app:layout_constraintTop_toBottomOf="@+id/categoria"
+            tools:ignore="MissingConstraints" />
+
+        <ImageView
+            android:id="@+id/genImg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/octava_gen"
+            app:layout_constraintBottom_toBottomOf="@+id/vel"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/def"
+            app:layout_constraintTop_toBottomOf="@+id/genText"
+            tools:ignore="MissingConstraints" />
+
+
+        <TextView
+            android:id="@+id/huevo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:gravity="center"
+            android:text="Grupo Huevo\nCampo"
+            app:layout_constraintBottom_toBottomOf="@+id/sdef"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/atq"
+            app:layout_constraintTop_toBottomOf="@+id/genImg"
+            tools:ignore="MissingConstraints" />
+
+
+        <TextView
+            android:id="@+id/mov_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/sdef"
+            app:layout_constraintBottom_toTopOf="@+id/scrollMov"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/huevo"
+            android:text="Lista de movimientos por nivel"
+            tools:ignore="MissingConstraints" />
+
+        <ScrollView
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+
+            android:id="@+id/scrollMov"
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/mov_text">
+
+            <LinearLayout
+                android:id="@+id/mov_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:id="@+id/mov1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:text="Lv01"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:textSize="16sp" />
+                    <TextView
+                        android:layout_width="100dp"
+                        android:text="Garra Umbría"
+                        android:gravity="center"
+                        android:layout_height="match_parent"
+                        android:textSize="16sp" />
+                    <ImageView
+                        android:layout_weight="1"
+                        android:layout_width="6dp"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/fisico"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:text="70"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:textSize="16sp" />
+                    <TextView
+                        android:layout_width="50dp"
+                        android:text="100%"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:textSize="16sp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:text="15"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:textSize="16sp" />
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/mov2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:text="Lv01"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:textSize="16sp" />
+                    <TextView
+                        android:layout_width="100dp"
+                        android:text="Afilagarras"
+                        android:gravity="center"
+                        android:layout_height="match_parent"
+                        android:textSize="16sp" />
+                    <ImageView
+                        android:layout_weight="1"
+                        android:layout_width="6dp"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/status"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="00"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:layout_width="50dp"
+                        android:text="100%"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:textSize="16sp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:text="15"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:textSize="16sp" />
+                </LinearLayout>
+                <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:id="@+id/mov3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:text="Lv12"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:textSize="16sp" />
+                    <TextView
+                        android:layout_width="100dp"
+                        android:text="Sombra Vil"
+                        android:gravity="center"
+                        android:layout_height="match_parent"
+                        android:textSize="16sp" />
+                    <ImageView
+                        android:layout_weight="1"
+                        android:layout_width="6dp"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/fisico"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:text="40"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:textSize="16sp" />
+                    <TextView
+                        android:layout_width="50dp"
+                        android:text="100%"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:textSize="16sp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:text="30"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:textSize="16sp" />
+                </LinearLayout>
+                <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:id="@+id/mov4"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:text="Lv16"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:textSize="16sp" />
+                    <TextView
+                        android:layout_width="100dp"
+                        android:text="Maldición"
+                        android:gravity="center"
+                        android:layout_height="match_parent"
+                        android:textSize="16sp" />
+                    <ImageView
+                        android:layout_weight="1"
+                        android:layout_width="6dp"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/status"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="00"
+                        android:textSize="16sp" />
+                    <TextView
+                        android:layout_width="50dp"
+                        android:text="100%"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:textSize="16sp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:text="10"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:textSize="16sp" />
+                </LinearLayout>
+                <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:id="@+id/mov6"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:text="Lv40"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:textSize="16sp" />
+                    <TextView
+                        android:layout_width="100dp"
+                        android:text="Bola Sombra"
+                        android:gravity="center"
+                        android:layout_height="match_parent"
+                        android:textSize="16sp" />
+                    <ImageView
+                        android:layout_weight="1"
+                        android:layout_width="6dp"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/especial"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:text="80"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:textSize="16sp" />
+                    <TextView
+                        android:layout_width="50dp"
+                        android:text="90%"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:textSize="16sp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:text="15"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:textSize="16sp" />
+                </LinearLayout>
+                <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:id="@+id/mov7"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:text="Lv46"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:textSize="16sp" />
+                    <TextView
+                        android:layout_width="100dp"
+                        android:text="R.Reprimido"
+                        android:gravity="center"
+                        android:layout_height="match_parent"
+                        android:textSize="16sp" />
+                    <ImageView
+                        android:layout_weight="1"
+                        android:layout_width="6dp"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/especial"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:text="75"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:textSize="16sp" />
+                    <TextView
+                        android:layout_width="50dp"
+                        android:text="100%"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:textSize="16sp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:text="10"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </ScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </FrameLayout>

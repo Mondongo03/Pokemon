@@ -7,7 +7,9 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 
+import com.bumptech.glide.Glide;
 import com.example.pokemon_fv.databinding.FragmentLucarioBinding;
 import com.example.pokemon_fv.databinding.FragmentZoroarkBinding;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -72,6 +74,20 @@ public class ZoroarkFragment extends Fragment {
         BottomNavigationView navView = requireActivity().findViewById(R.id.nav_view);
         navView.setVisibility(View.GONE);
 
+        ImageView back = root.findViewById(R.id.back);
+
+        ImageView imageView = root.findViewById(R.id.gifzoroark);
+
+// Cargar y mostrar un GIF desde una URL
+        Glide.with(this).asGif().load(R.drawable.zoroark_gif).into(imageView);
+
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Navigate back
+                requireActivity().onBackPressed();
+            }
+        });
         return root;
     }
 }
