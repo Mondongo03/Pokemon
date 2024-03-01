@@ -67,19 +67,13 @@ public class RayquazaFragment extends Fragment {
         navView.setVisibility(View.INVISIBLE);
 
 
-        Spinner spinner = root.findViewById(R.id.imageSpinner);
 
         // Define las imágenes que deseas mostrar en el Spinner
         Integer[] images = {R.drawable.rayquaza_home, R.drawable.rhyperior_home, R.drawable.dragonite_home};
 
         // Crea un adaptador personalizado y configúralo en el Spinner
         ImageSpinnerAdapter adapter = new ImageSpinnerAdapter(requireContext(), R.layout.item_spinner_image, images);
-        spinner.setAdapter(adapter);
 
-        ImageView imageView = root.findViewById(R.id.ImagenPrueba);
-
-// Cargar y mostrar un GIF desde una URL
-        Glide.with(this).asGif().load(R.drawable.ichigo).into(imageView);
 
 // Cargar y mostrar un GIF desde recursos
 

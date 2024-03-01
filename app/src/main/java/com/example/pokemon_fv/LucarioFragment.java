@@ -1,5 +1,6 @@
 package com.example.pokemon_fv;
 
+import android.content.pm.ActivityInfo;
 import android.graphics.Color;
 import android.os.Bundle;
 
@@ -72,7 +73,9 @@ public class LucarioFragment extends Fragment {
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
         BottomNavigationView navView = requireActivity().findViewById(R.id.nav_view);
-
+        if (getActivity() != null) {
+            getActivity().setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+        }
             navView.setVisibility(View.INVISIBLE);
     }
 
@@ -82,6 +85,7 @@ public class LucarioFragment extends Fragment {
         // Inflate the layout for this fragment
         binding = FragmentLucarioBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
+
         ImageView back = root.findViewById(R.id.back);
 
         ImageView imageView = root.findViewById(R.id.gifLucario);
@@ -98,5 +102,13 @@ public class LucarioFragment extends Fragment {
         });
 
         return root;
+    }
+
+    @Override
+    public void onDestroyView() {
+        super.onDestroyView();
+        if (getActivity() != null) {
+            getActivity().setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_UNSPECIFIED);
+        }
     }
 }
