@@ -3,10 +3,33 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".StartFragment"
     android:background="@color/red_hard">
-        <ImageView
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"/>
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/pokeball_gif"
+            android:layout_width="match_parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_height="600dp"
+            android:src="@drawable/pokeball_png_2"
+            tools:ignore="MissingConstraints"/>
+
+        <TextView
+            app:layout_constraintTop_toBottomOf="@+id/pokeball_gif"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="30dp"
+            android:text="Haz Click para continuar"
+            tools:ignore="MissingConstraints" />
+
+
+
+        </LinearLayout>
 
 </FrameLayout>

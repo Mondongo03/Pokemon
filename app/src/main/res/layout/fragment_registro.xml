@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".RegistroFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/textoPokemon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/nombreText"
+            style="@style/CustomFontStyle"
+            android:textColor="@color/black"
+            android:text="Estás apunto de empezar tu aventura"
+            android:gravity="center"
+            android:textSize="40dp"/>
+
+        <EditText
+            android:id="@+id/nombreText"
+            android:background="@drawable/borde_gris_lupa"
+            app:layout_constraintTop_toBottomOf="@+id/textoPokemon"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/emailEditText"
+            android:paddingStart="20dp"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            style="@style/CustomFontStyle"
+            android:hint="Nombre de entrenador *"
+            android:inputType="text" />
+
+        <EditText
+            android:id="@+id/emailEditText"
+            android:background="@drawable/borde_gris_lupa"
+            app:layout_constraintTop_toBottomOf="@+id/nombreText"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/telefonoText"
+            android:paddingStart="20dp"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            style="@style/CustomFontStyle"
+            android:hint="Correo electrónico *"
+            android:inputType="textEmailAddress" />
+
+        <EditText
+            android:id="@+id/telefonoText"
+            android:background="@drawable/borde_gris_lupa"
+            app:layout_constraintTop_toBottomOf="@+id/emailEditText"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/edadText"
+            android:paddingStart="20dp"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            style="@style/CustomFontStyle"
+            android:hint="Teléfono"
+            android:inputType="phone" />
+        <EditText
+            android:id="@+id/edadText"
+            android:background="@drawable/borde_gris_lupa"
+            app:layout_constraintTop_toBottomOf="@+id/telefonoText"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/contraText"
+            android:paddingStart="20dp"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            style="@style/CustomFontStyle"
+            android:hint="dd/mm/yy *"
+            android:inputType="date" />
+
+        <EditText
+            android:id="@+id/contraText"
+            android:background="@drawable/borde_gris_lupa"
+            app:layout_constraintTop_toBottomOf="@+id/edadText"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/confirmContraText"
+            android:paddingStart="20dp"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            style="@style/CustomFontStyle"
+            android:hint="Contraseña *"
+            android:inputType="textPassword" />
+        <EditText
+            android:id="@+id/confirmContraText"
+            android:background="@drawable/borde_gris_lupa"
+            app:layout_constraintTop_toBottomOf="@+id/contraText"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/btnRegisterr"
+            android:paddingStart="20dp"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            style="@style/CustomFontStyle"
+            android:hint="Confirmar contraseña *"
+            android:inputType="textPassword" />
+
+        <TextView
+            android:id="@+id/btnRegisterr"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            app:layout_constraintTop_toBottomOf="@+id/confirmContraText"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:textColor="@color/white"
+            android:text="Registrarse"
+            android:gravity="center"
+            android:background="@drawable/borde_btn"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

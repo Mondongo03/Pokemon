@@ -46,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
 
         navController.addOnDestinationChangedListener((controller, destination, arguments) -> {
             // Verifica si el fragmento actual es StartFragment
-            if (destination.getId() == R.id.startFragment) {
+            if (destination.getId() == R.id.startFragment || destination.getId() == R.id.loginFragment || destination.getId() == R.id.registroFragment|| destination.getId() == R.id.contraFragment) {
                 // Si es StartFragment, haz que el BottomNavigationView sea invisible
                 navView.setVisibility(View.INVISIBLE);
             } else {

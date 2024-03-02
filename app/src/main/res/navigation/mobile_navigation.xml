@@ -42,4 +42,19 @@
         android:name="com.example.pokemon_fv.StartFragment"
         android:label="fragment_start"
         tools:layout="@layout/fragment_start" />
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.pokemon_fv.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" />
+    <fragment
+        android:id="@+id/registroFragment"
+        android:name="com.example.pokemon_fv.RegistroFragment"
+        android:label="fragment_registro"
+        tools:layout="@layout/fragment_registro" />
+    <fragment
+        android:id="@+id/contraFragment"
+        android:name="com.example.pokemon_fv.ContraFragment"
+        android:label="fragment_contra"
+        tools:layout="@layout/fragment_contra" />
 </navigation>

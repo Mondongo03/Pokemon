@@ -124,7 +124,7 @@
             android:layout_marginTop="20dp"
             android:background="@drawable/borde_gris_lupa"
             android:orientation="horizontal"
-            app:layout_constraintEnd_toEndOf="@+id/habilidad2"
+            app:layout_constraintEnd_toEndOf="@+id/habilidades"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/gifRayquaza"
             tools:ignore="MissingConstraints">
@@ -159,7 +159,7 @@
 
             android:background="@drawable/borde_gris_lupa"
             android:orientation="horizontal"
-            app:layout_constraintEnd_toEndOf="@+id/habilidad2"
+            app:layout_constraintEnd_toEndOf="@+id/habilidades"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/hp"
             tools:ignore="MissingConstraints">
@@ -193,7 +193,7 @@
             android:layout_marginTop="10dp"
             android:background="@drawable/borde_gris_lupa"
             android:orientation="horizontal"
-            app:layout_constraintEnd_toEndOf="@+id/habilidad2"
+            app:layout_constraintEnd_toEndOf="@+id/habilidades"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/atq"
             tools:ignore="MissingConstraints">
@@ -227,7 +227,7 @@
             android:layout_marginTop="10dp"
             android:background="@drawable/borde_gris_lupa"
             android:orientation="horizontal"
-            app:layout_constraintEnd_toEndOf="@+id/habilidad2"
+            app:layout_constraintEnd_toEndOf="@+id/habilidades"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/def"
             tools:ignore="MissingConstraints">
@@ -261,7 +261,7 @@
             android:layout_marginTop="10dp"
             android:background="@drawable/borde_gris_lupa"
             android:orientation="horizontal"
-            app:layout_constraintEnd_toEndOf="@+id/habilidad2"
+            app:layout_constraintEnd_toEndOf="@+id/habilidades"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/vel"
             tools:ignore="MissingConstraints">
@@ -295,7 +295,7 @@
             android:layout_marginTop="10dp"
             android:background="@drawable/borde_gris_lupa"
             android:orientation="horizontal"
-            app:layout_constraintEnd_toEndOf="@+id/habilidad2"
+            app:layout_constraintEnd_toEndOf="@+id/habilidades"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/satq"
             tools:ignore="MissingConstraints">
