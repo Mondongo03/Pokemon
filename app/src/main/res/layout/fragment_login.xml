@@ -71,6 +71,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             android:textColor="@color/white"
             android:text="Iniciar Sesión"
+            style="@style/CustomFontStyle"
             android:gravity="center"
             android:background="@drawable/borde_btn"
             app:layout_constraintBottom_toBottomOf="@id/textContra"/>
@@ -96,6 +97,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             android:textColor="@color/white"
             android:text="Registrarse"
+            style="@style/CustomFontStyle"
             android:gravity="center"
             android:background="@drawable/borde_btn"
             app:layout_constraintBottom_toBottomOf="parent"/>

@@ -6,16 +6,447 @@
     android:layout_height="match_parent"
     tools:context=".ui.dashboard.DashboardFragment">
 
-    <TextView
-        android:id="@+id/text_dashboard"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:textAlignment="center"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/defensor"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        android:id="@+id/atacante"
+        android:background="@drawable/borde_gris"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="40dp"
+        android:layout_height="wrap_content">
+
+    <ImageView
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/siniestroAtacante"
+        app:layout_constraintBottom_toTopOf="@id/rocaAtacante"
+        android:id="@+id/bichoAtacante"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@drawable/bicho"/>
+
+        <ImageView
+            app:layout_constraintStart_toEndOf="@id/bichoAtacante"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/aguaAtacante"
+            app:layout_constraintBottom_toTopOf="@id/rocaAtacante"
+            android:id="@+id/siniestroAtacante"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/siniestro"/>
+
+        <ImageView
+            app:layout_constraintStart_toEndOf="@id/siniestroAtacante"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/rocaAtacante"
+            app:layout_constraintEnd_toStartOf="@id/electricoAtacante"
+            android:id="@+id/aguaAtacante"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/agua"/>
+
+        <ImageView
+            app:layout_constraintStart_toEndOf="@id/aguaAtacante"
+            app:layout_constraintBottom_toTopOf="@id/rocaAtacante"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/psiquicoAtacante"
+            android:id="@+id/electricoAtacante"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/electrico"/>
+        <ImageView
+            app:layout_constraintStart_toEndOf="@id/electricoAtacante"
+            app:layout_constraintBottom_toTopOf="@id/rocaAtacante"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:id="@+id/psiquicoAtacante"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/psiquico"/>
+
+      <!--  <ImageView
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/voladorAtacante"
+            app:layout_constraintTop_toBottomOf="@id/bichoAtacante"
+            android:id="@+id/rocaAtacante"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/bicho"/>
+        <ImageView
+            app:layout_constraintStart_toEndOf="@id/rocaAtacante"
+            app:layout_constraintTop_toBottomOf="@id/bichoAtacante"
+            app:layout_constraintEnd_toStartOf="@id/fantasmaAtacante"
+            android:id="@+id/voladorAtacante"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/bicho"/>
+        <ImageView
+            app:layout_constraintStart_toEndOf="@id/rocaAtacante"
+            app:layout_constraintTop_toBottomOf="@id/bichoAtacante"
+            android:id="@+id/fantasmaAtacante"
+            app:layout_constraintEnd_toStartOf="@id/fuegoAtacante"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/bicho"/>
+        <ImageView
+            app:layout_constraintStart_toEndOf="@id/fantasmaAtacante"
+            app:layout_constraintTop_toBottomOf="@id/bichoAtacante"
+            android:id="@+id/fuegoAtacante"
+            app:layout_constraintEnd_toStartOf="@id/dragonAtacante"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/bicho"/>
+
+        <ImageView
+            app:layout_constraintStart_toEndOf="@id/fuegoAtacante"
+            app:layout_constraintTop_toBottomOf="@id/psiquicoAtacante"
+            android:id="@+id/dragonAtacante"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/bicho"/> -->
+
+        <ImageView
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/bichoAtacante"
+            app:layout_constraintEnd_toStartOf="@id/voladorAtacante"
+            app:layout_constraintBottom_toTopOf="@id/tierraAtacante"
+            android:id="@+id/rocaAtacante"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/roca"/>
+
+        <ImageView
+            app:layout_constraintStart_toEndOf="@id/rocaAtacante"
+            app:layout_constraintTop_toBottomOf="@id/bichoAtacante"
+            app:layout_constraintEnd_toStartOf="@id/fantasmaAtacante"
+            app:layout_constraintBottom_toTopOf="@id/tierraAtacante"
+            android:id="@+id/voladorAtacante"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/volador2"/>
+
+        <ImageView
+            app:layout_constraintStart_toEndOf="@id/voladorAtacante"
+            app:layout_constraintTop_toBottomOf="@id/bichoAtacante"
+            app:layout_constraintBottom_toTopOf="@id/tierraAtacante"
+            app:layout_constraintEnd_toStartOf="@id/fuegoAtacante"
+            android:id="@+id/fantasmaAtacante"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/fantasma2"/>
+
+        <ImageView
+            app:layout_constraintStart_toEndOf="@id/fantasmaAtacante"
+            app:layout_constraintTop_toBottomOf="@id/bichoAtacante"
+            app:layout_constraintBottom_toTopOf="@id/tierraAtacante"
+            app:layout_constraintEnd_toStartOf="@id/dragonAtacante"
+            android:id="@+id/fuegoAtacante"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/fuego"/>
+        <ImageView
+            app:layout_constraintStart_toEndOf="@id/fuegoAtacante"
+            app:layout_constraintTop_toBottomOf="@id/bichoAtacante"
+            app:layout_constraintBottom_toTopOf="@id/tierraAtacante"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:id="@+id/dragonAtacante"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/dragon2"/>
+
+
+
+
+
+        <ImageView
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/rocaAtacante"
+            app:layout_constraintEnd_toStartOf="@id/voladorAtacante"
+            android:id="@+id/tierraAtacante"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/tierra"/>
+
+        <ImageView
+            app:layout_constraintStart_toEndOf="@id/rocaAtacante"
+            app:layout_constraintTop_toBottomOf="@id/rocaAtacante"
+            app:layout_constraintEnd_toStartOf="@id/fantasmaAtacante"
+            android:id="@+id/hadaAtacante"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/hada"/>
+
+        <ImageView
+            app:layout_constraintStart_toEndOf="@id/voladorAtacante"
+            app:layout_constraintTop_toBottomOf="@id/rocaAtacante"
+            app:layout_constraintEnd_toStartOf="@id/fuegoAtacante"
+            android:id="@+id/venenoAtacante"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/veneno"/>
+
+        <ImageView
+            app:layout_constraintStart_toEndOf="@id/fantasmaAtacante"
+            app:layout_constraintTop_toBottomOf="@id/rocaAtacante"
+            app:layout_constraintEnd_toStartOf="@id/dragonAtacante"
+            android:id="@+id/normalAtacante"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/normal2"/>
+        <ImageView
+            app:layout_constraintStart_toEndOf="@id/fuegoAtacante"
+            app:layout_constraintTop_toBottomOf="@id/rocaAtacante"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:id="@+id/hieloAtacnante"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/hielo"/>
+
+        <ImageView
+            android:id="@+id/luchaAtacante"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/lucha2"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/aceroAtacante"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tierraAtacante" />
+
+        <ImageView
+            app:layout_constraintStart_toEndOf="@id/luchaAtacante"
+            app:layout_constraintTop_toBottomOf="@id/tierraAtacante"
+            app:layout_constraintEnd_toStartOf="@id/textoAtacante"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:id="@+id/aceroAtacante"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/acero2"/>
+
+        <TextView
+            android:id="@+id/textoAtacante"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tipo Atacante"
+            android:textSize="20dp"
+            app:layout_constraintTop_toBottomOf="@+id/tierraAtacante"
+            app:layout_constraintStart_toEndOf="@+id/aceroAtacante"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        app:layout_constraintTop_toBottomOf="@id/atacante"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/btnCalcular"
+        android:background="@drawable/borde_gris"
+        android:id="@+id/defensor"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/siniestroDefensor"
+            app:layout_constraintBottom_toTopOf="@id/rocaDefensor"
+            android:id="@+id/bichoDefensor"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/bicho"/>
+
+        <ImageView
+            app:layout_constraintStart_toEndOf="@id/bichoDefensor"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/aguaDefensor"
+            app:layout_constraintBottom_toTopOf="@id/rocaDefensor"
+            android:id="@+id/siniestroDefensor"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/siniestro"/>
+
+        <ImageView
+            app:layout_constraintStart_toEndOf="@id/siniestroDefensor"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/rocaDefensor"
+            app:layout_constraintEnd_toStartOf="@id/electricoDefensor"
+            android:id="@+id/aguaDefensor"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/agua"/>
+
+        <ImageView
+            app:layout_constraintStart_toEndOf="@id/aguaDefensor"
+            app:layout_constraintBottom_toTopOf="@id/rocaDefensor"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/psiquicoDefensor"
+            android:id="@+id/electricoDefensor"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/electrico"/>
+        <ImageView
+            app:layout_constraintStart_toEndOf="@id/electricoDefensor"
+            app:layout_constraintBottom_toTopOf="@id/rocaDefensor"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:id="@+id/psiquicoDefensor"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/psiquico"/>
+
+
+        <ImageView
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/bichoDefensor"
+            app:layout_constraintEnd_toStartOf="@id/voladorDefensor"
+            app:layout_constraintBottom_toTopOf="@id/tierraDefensor"
+            android:id="@+id/rocaDefensor"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/roca"/>
+
+        <ImageView
+            app:layout_constraintStart_toEndOf="@id/rocaDefensor"
+            app:layout_constraintTop_toBottomOf="@id/bichoDefensor"
+            app:layout_constraintEnd_toStartOf="@id/fantasmaDefensor"
+            app:layout_constraintBottom_toTopOf="@id/tierraDefensor"
+            android:id="@+id/voladorDefensor"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/volador2"/>
+
+        <ImageView
+            app:layout_constraintStart_toEndOf="@id/voladorDefensor"
+            app:layout_constraintTop_toBottomOf="@id/bichoDefensor"
+            app:layout_constraintBottom_toTopOf="@id/tierraDefensor"
+            app:layout_constraintEnd_toStartOf="@id/fuegoDefensor"
+            android:id="@+id/fantasmaDefensor"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/fantasma2"/>
+
+        <ImageView
+            app:layout_constraintStart_toEndOf="@id/fantasmaDefensor"
+            app:layout_constraintTop_toBottomOf="@id/bichoDefensor"
+            app:layout_constraintBottom_toTopOf="@id/tierraDefensor"
+            app:layout_constraintEnd_toStartOf="@id/dragonDefensor"
+            android:id="@+id/fuegoDefensor"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/fuego"/>
+        <ImageView
+            app:layout_constraintStart_toEndOf="@id/fuegoDefensor"
+            app:layout_constraintTop_toBottomOf="@id/bichoDefensor"
+            app:layout_constraintBottom_toTopOf="@id/tierraDefensor"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:id="@+id/dragonDefensor"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/dragon2"/>
+
+
+
+
+
+        <ImageView
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/rocaDefensor"
+            app:layout_constraintEnd_toStartOf="@id/voladorDefensor"
+            android:id="@+id/tierraDefensor"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/tierra"/>
+
+        <ImageView
+            app:layout_constraintStart_toEndOf="@id/rocaDefensor"
+            app:layout_constraintTop_toBottomOf="@id/rocaDefensor"
+            app:layout_constraintEnd_toStartOf="@id/fantasmaDefensor"
+            android:id="@+id/hadaDefensor"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/hada"/>
+
+        <ImageView
+            app:layout_constraintStart_toEndOf="@id/voladorDefensor"
+            app:layout_constraintTop_toBottomOf="@id/rocaDefensor"
+            app:layout_constraintEnd_toStartOf="@id/fuegoDefensor"
+            android:id="@+id/venenoDefensor"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/veneno"/>
+
+        <ImageView
+            app:layout_constraintStart_toEndOf="@id/fantasmaDefensor"
+            app:layout_constraintTop_toBottomOf="@id/rocaDefensor"
+            app:layout_constraintEnd_toStartOf="@id/dragonDefensor"
+            android:id="@+id/normalDefensor"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/normal2"/>
+        <ImageView
+            app:layout_constraintStart_toEndOf="@id/fuegoDefensor"
+            app:layout_constraintTop_toBottomOf="@id/rocaDefensor"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:id="@+id/hieloDefensor"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/hielo"/>
+
+        <ImageView
+            android:id="@+id/luchaDefensor"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/lucha2"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/aceroDefensor"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tierraDefensor" />
+
+        <ImageView
+            app:layout_constraintStart_toEndOf="@id/luchaDefensor"
+            app:layout_constraintTop_toBottomOf="@id/tierraDefensor"
+            app:layout_constraintEnd_toStartOf="@id/textoDefensor"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:id="@+id/aceroDefensor"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/acero2"/>
+
+        <TextView
+            android:id="@+id/textoDefensor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tipo Defensor"
+            android:textSize="20dp"
+            app:layout_constraintTop_toBottomOf="@+id/tierraDefensor"
+            app:layout_constraintStart_toEndOf="@+id/aceroDefensor"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/btnCalcular"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/defensor"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="140dp"
+        style="@style/CustomFontStyle"
+        android:textColor="@color/white"
+        android:text="Calcular"
+        android:gravity="center"
+        android:background="@drawable/borde_btn"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
